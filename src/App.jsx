@@ -2,6 +2,12 @@ import React from 'react'
 import { HeroSection } from './components/HeroSection'
 import { Navbar } from './components/navbar'
 import { Dishes } from './components/Dishes'
+import { About } from './components/About'
+import { Mission } from './components/Mission'
+import { Expertise } from './components/Expertise'
+import { Contacts } from './components/Contacts'
+import { Footer } from './components/Footer'
+import { Reviews } from './components/Reviews'
 
 export default function App(props) {
   return (
@@ -9,6 +15,12 @@ export default function App(props) {
       <Navbar />
       <HeroSection />
       <Dishes />
+      <About />
+      <Mission />
+      <Expertise />
+      <Reviews />
+      <Contacts />
+      <Footer />
     </>
   )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import video from '../assets/hero.mp4'
 import logo from '../assets/logo.png'
 import hero from '../assets/hero.jpeg'
+import { motion } from 'framer-motion'
 
 export function HeroSection(props) {
   return (
@@ -19,7 +20,10 @@ export function HeroSection(props) {
 
       <div className='absolute z-20 inset-0 h-full w-full bg-gradient-to-b from-transparent from-70% to-black'></div>
       <div className='relative z-20 h-screen flex flex-col justify-end pb-20'>
-        <img
+        <motion.img
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           src={logo}
           alt='logo'
           className='w-full p-4'
