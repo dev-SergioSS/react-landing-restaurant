@@ -4,7 +4,7 @@ import { LINKS } from '../constants'
 import { FaTimes } from 'react-icons/fa'
 import { FaBars } from 'react-icons/fa6'
 
-export function Navbar(props) {
+export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const toggleMobileMenu = () => {

@@ -1,16 +1,44 @@
+import { motion } from 'framer-motion'
 import { CUSINES } from '../constants'
 
-export function Expertise(props) {
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 1,
+    },
+  },
+}
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+    },
+  },
+}
+
+export function Expertise() {
   return (
     <section id='expertise'>
       <h2 className='my-8 text-center text-3xl tracking-tighter lg:text-4xl'>
         Our Expertise
       </h2>
-      <div className='container mx-auto px-4'>
+      <motion.div
+        className='container mx-auto px-4'
+        initial='hidden'
+        whileInView='show'
+        variants={containerVariants}>
         {CUSINES.map((cusine, index) => (
-          <div
+          <motion.div
             key={index}
-            className='flex items-center border-b-4 border-dotted border-neutral-700/40 py-2'>
+            className='flex items-center border-b-4 border-dotted border-neutral-700/40 py-2'
+            // initial='hidden'
+            // whileInView='show'
+            variants={itemVariants}>
             <div className='flex-shrink-0 pr-8 text-2xl'>{cusine.number}</div>
             <div className='w-1/3 flex-shrink-0 '>
               <img
@@ -27,9 +55,9 @@ export function Expertise(props) {
                 {cusine.description}
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }

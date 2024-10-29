@@ -1,6 +1,5 @@
-import React from 'react'
 import { HeroSection } from './components/HeroSection'
-import { Navbar } from './components/navbar'
+import { Navbar } from './components/Navbar'
 import { Dishes } from './components/Dishes'
 import { About } from './components/About'
 import { Mission } from './components/Mission'
@@ -9,7 +8,7 @@ import { Contacts } from './components/Contacts'
 import { Footer } from './components/Footer'
 import { Reviews } from './components/Reviews'
 
-export default function App(props) {
+export default function App() {
   return (
     <>
       <Navbar />
