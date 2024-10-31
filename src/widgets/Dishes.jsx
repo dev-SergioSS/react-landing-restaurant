@@ -1,5 +1,5 @@
 import { DISHES } from '../constants'
-import DishCard from './DishCard'
+import DishCard from '../shared/components/DishCard/DishCard'
 
 export function Dishes(props) {
   return (
